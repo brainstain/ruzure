@@ -41,7 +41,7 @@ platforms :ruby do
 end
 
 # Use Capistrano for deployment
-gem 'capistrano', '~> 3.1.0'
+gem 'capistrano','~> 2.15'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

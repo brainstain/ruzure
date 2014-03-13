@@ -2,7 +2,7 @@ worker_processes 2
 timeout 30
 listen "/tmp/unicorn.blog.sock"
 
-root = "/home/blogger/apps/blog_app/current"
+root = "/home/brian/apps/blog_app/current"
 
 working_directory root
 
