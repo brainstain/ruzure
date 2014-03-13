@@ -1,8 +1,8 @@
 worker_processes 2
 timeout 30
-listen "/tmp/unicorn.blog.sock"
+listen "/tmp/unicorn.ruzure.sock"
 
-root = "/home/brian/apps/blog_app/current"
+root = "/home/brian/apps/ruzure/current"
 
 working_directory root
 

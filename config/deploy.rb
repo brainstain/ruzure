@@ -1,15 +1,20 @@
-
 require "bundler/capistrano"
-set :stages, ["staging", "production"]
-set :default_stage, "staging"
 
-set :application, 'ruzure'
-set :scm, :git
-set :repo_url, 'git@github.com:brainstain/ruzure.git'
-set :scm_passphrase, "Guttle35"
-set :branch, "master"
+set :application, "ruzure"
 set :user, "brian"
+
+set :scm, :git
+set :repository, "git@github.com:brainstain/ruzure.git"
+set :branch, "master"
 set :use_sudo, true
+
+server "ruzure.cloudapp.net", :web, :app, :db, primary: true
+
+set :deploy_to, "/home/#{user}/apps/#{application}"
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+ssh_options[:port] = 22
+
 set :bundle_flags, "--no-deployment --quiet"
 
 namespace :deploy do
