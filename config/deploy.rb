@@ -10,6 +10,7 @@ set :scm_passphrase, "Guttle35"
 set :branch, "master"
 set :user, "brian"
 set :use_sudo, true
+set :bundle_flags, "--no-deployment --quiet"
 
 namespace :deploy do
 
