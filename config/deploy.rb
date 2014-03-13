@@ -16,7 +16,7 @@ set :use_sudo, true
 namespace :deploy do
 
   desc "Fix permissions"
-  task :fix_permissions, roles: [ :app, :db, :web ] do
+  task :fix_permissions, [ :app, :db, :web ] => :roles  do
     run "chmod +x #{release_path}/config/unicorn_init.sh"
   end
 
