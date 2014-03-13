@@ -1,22 +1,20 @@
-require "bundler/capistrano"
 
-set :application, "ruzure"
-set :user, "brian"
+# config valid only for Capistrano 3.1
+lock '3.1.0'
 
-set :bundle_flags, "--no-deployment --quiet"
+set :stages, ["staging", "production"]
+set :default_stage, "staging"
+
+set :application, 'ruzure'
 set :scm, :git
-set :repository, "git@github.com:brainstain/ruzure.git"
+set :repo_url, 'git@github.com:brainstain/ruzure.git'
+set :scm_passphrase, "Guttle35"
 set :branch, "master"
+set :user, "brian"
 set :use_sudo, true
 
-server "ruzure.cloudapp.net", :web, :app, :db, primary: true
-
-set :deploy_to, "/home/#{user}/apps/#{application}"
-default_run_options[:pty] = true
-ssh_options[:forward_agent] = true
-ssh_options[:port] = 22
-
 namespace :deploy do
+
   desc "Fix permissions"
   task :fix_permissions, :roles => [ :app, :db, :web ] do
     run "chmod +x #{release_path}/config/unicorn_init.sh"
@@ -41,4 +39,5 @@ namespace :deploy do
   end
   after "deploy:finalize_update", "deploy:fix_permissions"
   after "deploy:finalize_update", "deploy:symlink_config"
+
 end
