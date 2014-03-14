@@ -4,3 +4,12 @@
 #= require_self
 #= require_tree ./services
 #= require_tree ./controllers
+
+Brain = angular.module('Brain', ['ngRoute']);
+
+Brain.config(['$routeProvider', ($routeProvider) ->
+  $routeProvider.when('/',{
+    templateUrl: '../assets/mainIndex.html',
+    controller: 'IndexCtrl'
+  })
+])
