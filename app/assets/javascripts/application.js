@@ -20,4 +20,3 @@
 //= require ui-bootstrap-tpls-0.10.0.min
 //= require app.js
 //= require_tree ./controllers
-//= require_tree ./services
