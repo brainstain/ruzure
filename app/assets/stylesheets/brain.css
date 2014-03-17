@@ -1,0 +1,18 @@
+.dropdown a{
+    font-size: 15px;
+}
+.dropdown > a > i{
+    font-size: 10px;
+}
+.brain-header h1{
+    font-size: 80px;
+    color: white;
+}
+.brain-header{
+    font-size: 30px;
+    color: lightgray;
+    background-color: #483D8B;
+}
+.header > .navbar.navbar-default{
+    margin-bottom: 0;
+}

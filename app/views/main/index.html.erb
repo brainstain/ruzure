@@ -1,2 +1,55 @@
-<div class="container" ng-view>
+<div class="header">
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class=sr-only>Toggle Navigation</span>
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img id="logo-header" alt="Brain Stain">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">
+                            Home
+                            <i class="glyphicon glyphicon-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                             <li class="">
+                                 <a href="/">Link Me</a>
+                             </li>
+                        </ul>
+                    </li>
+                    <li class="hidden-sm">
+                        <a class="search">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="search-open" style="display: none;">
+                     <div class="input-group">
+                         <input type="text" class="form-control" placeholder="Search">
+                         <span class="input-group-btn">
+                             <button class="btn-u" type="button">Search</button>
+                         </span>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div role="main">
+    <header class="brain-header">
+        <div class="container">
+            <h1>Brain Stain</h1>
+            <p>Where great minds collaborate for good</p>
+        </div>
+    </header>
+
+    <div class="container" ng-view>
+    </div>
 </div>

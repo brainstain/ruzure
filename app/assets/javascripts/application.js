@@ -16,6 +16,8 @@
 //= require angular-route.min.js
 //= require angular-resource.min
 //= require angular-resource.min.js
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap.min
+//= require ui-bootstrap-0.10.0.min
+//= require ui-bootstrap-tpls-0.10.0.min
+//= require app.js
+//= require_tree ./controllers
+//= require_tree ./services
