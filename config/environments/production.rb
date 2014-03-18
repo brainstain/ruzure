@@ -5,6 +5,8 @@ Ruzure::Application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
+  config.assets.precompile += ['angular.min.js', 'angular-resource.min.js', 'angular-route.min.js', 'ui-bootstrap-0.10.0.min.js', 'ui-bootstrap.tpls-0.10.0.min.js',
+                               'bootstrap.min.css', 'bootstrap-theme.min.css']
 
   # Do not eager load code on boot.
   config.eager_load = false
